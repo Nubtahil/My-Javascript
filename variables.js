@@ -16,10 +16,10 @@ if(true){
 }
  console.log(car_name)
 
-// prefered if u use
-// const
-// let
-// var
+// prefered if you want to use 
+//1- const
+//2-let
+//3- var
 
 // hoisting
 
