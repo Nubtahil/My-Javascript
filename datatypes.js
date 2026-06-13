@@ -27,9 +27,10 @@ console.log(age) //undefined
 //-->object
 //-->function
 
-const array = [1,"b",true,{key:"value"}]
+// const array = [1,"b",true,{key:"value"}]
 //3.structural root datatypes
 //-->set
 //-->map
 //-->date
 
+ 
