@@ -44,3 +44,103 @@ const actors = [
 //     actor.name = "actor" +  "⭐"
 // console.log(actor)
 // }
+
+
+//filter
+// const actors = [
+//     {
+//         name:"Actor1",
+//         payement:300
+//     },
+//     {
+//         name:"Actor9",
+//         payement:10
+//     },
+//     {
+//         name:"Actor0",
+//         payement:100
+//     },
+// ]
+//filter gives result in boolean
+
+// let high_payments = actors.filter((actor)=>{
+// if(actor.payement>100){
+//     return true
+// }
+// else{
+//      return false
+// }
+// })
+// console.log(high_payments)
+
+//map
+
+// let user = [
+//     {
+//      name:"ali",
+//      sub_name:"abbas"
+//     },
+//     {
+//      name:"kainaat",
+//      sub_name:"haris"
+//     }
+// ]
+//  //we return new string using map
+// let map = user.map((use)=>{
+//  return{
+//     fullname:`${use.name} ${use.sub_name}`
+//  }
+// })
+// console.log(map)
+
+
+//Reduce
+// let movies = [
+//     {
+//         mname:"intersteller",
+//         budget:100
+//     },
+//      {
+//         mname:"matrix",
+//         budget:1220
+//     },
+//      {
+//         mname:"serial",
+//         budget:300
+//     },
+// ]
+//reduce() is used when you want to take an array and reduce it to a single value (number, object, array, string, etc.).
+//we don't need to make variables for calculation
+ 
+
+// let total = movies.reduce((acc,movie)=>{
+//  acc  = acc + movie.budget 
+//  return acc
+// },0)
+// console.log(total)
+
+// let contain = {
+//      mname:"serial",
+//      budget:300
+// }
+
+//includes()
+
+// let tell = movies.includes(contain.budget)
+console.log( movies.includes(contain.budget))
+
+
+let user = [ 
+    {
+        name:"per",
+        id:0
+    },
+     {
+        name:"peree",
+        id:1
+    },
+     {
+        name:"peyy",
+        id:2
+    },
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+ <input type="text" placeholder="enter one about you 😊🙂☺️ ">
+ <button onclick="pattern_match()">submit</button>
+
+
+ <script>
+let arr = []
+function pattern_match(){
+const input_user = document.querySelector("input")
+arr = input_user.value.split(" ")
+
+
+let arr2 = ["good", "sad", "happy"] 
+
+for(let i=0; i<arr2.length; i++){
+   for(let p=0; p<arr.length; p++){
+   if(arr2[i] == arr[p]){
+     console.log("matched!!!!")
+   }
+   else{
+    console.log("not matched!!")
+   }
+} 
+}
+ 
+
+
+
+
+console.log(arr)
+ }
+</script>
+</body>
+</html>
