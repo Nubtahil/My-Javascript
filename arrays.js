@@ -2,7 +2,7 @@
 // array is object in js tou is liye hum us pe function use kr skte hain
 //for example : 
 
-const arr = ["javascript","python","c++"]
+// const arr = ["javascript","python","c++"]
 
 // console.log(arr.length)
 //arr.push("dart")//add element at last
@@ -14,20 +14,20 @@ const arr = ["javascript","python","c++"]
 // console.log(arr.pop())
 // console.log(arr)
 
-const actors = [
-    {
-        name:"Actor1",
-        payement:300
-    },
-    {
-        name:"Actor9",
-        payement:10
-    },
-    {
-        name:"Actor0",
-        payement:100
-    },
-]
+// const actors = [
+//     {
+//         name:"Actor1",
+//         payement:300
+//     },
+//     {
+//         name:"Actor9",
+//         payement:10
+//     },
+//     {
+//         name:"Actor0",
+//         payement:100
+//     },
+// ]
 
 //i love loops❤️
 // for(let i = 0;i <actor.length; i++){
@@ -127,20 +127,38 @@ const actors = [
 //includes()
 
 // let tell = movies.includes(contain.budget)
-console.log( movies.includes(contain.budget))
+// console.log( movies.includes(contain.budget))
+
+//find
+// let user = [ 
+//     {
+//         name:"per",
+//         id:0
+//     },
+//      {
+//         name:"peree",
+//         id:1
+//     },
+//      {
+//         name:"peyy",
+//         id:2
+//     },
+// ]
+
+//  const find = user.find((user)=>{
+//     return  user.id >1
+// })
+// console.log(find)
+// //sort
+
+// const names = ["dania","ali","nubtahil","sajal","candeii","gania","eman"]
+
+// console.log(names.sort())
 
 
-let user = [ 
-    {
-        name:"per",
-        id:0
-    },
-     {
-        name:"peree",
-        id:1
-    },
-     {
-        name:"peyy",
-        id:2
-    },
-]
+
+//splice
+
+// const names = ["dania","ali","nubtahil","sajal","candeii","gania","eman"]
+// names.splice(0,2)
+// console.log(names.sort())
