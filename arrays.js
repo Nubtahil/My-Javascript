@@ -130,35 +130,35 @@
 // console.log( movies.includes(contain.budget))
 
 //find
-// let user = [ 
-//     {
-//         name:"per",
-//         id:0
-//     },
-//      {
-//         name:"peree",
-//         id:1
-//     },
-//      {
-//         name:"peyy",
-//         id:2
-//     },
-// ]
+let user = [ 
+    {
+        name:"per",
+        id:0
+    },
+     {
+        name:"peree",
+        id:1
+    },
+     {
+        name:"peyy",
+        id:2
+    },
+]
 
-//  const find = user.find((user)=>{
-//     return  user.id >1
-// })
-// console.log(find)
+ const find = user.find((user)=>{
+    return  user.id >1
+})
+console.log(find)
 // //sort
 
-// const names = ["dania","ali","nubtahil","sajal","candeii","gania","eman"]
+const names = ["dania","ali","nubtahil","sajal","candeii","gania","eman"]
 
-// console.log(names.sort())
+console.log(names.sort())
 
 
 
 //splice
 
-// const names = ["dania","ali","nubtahil","sajal","candeii","gania","eman"]
-// names.splice(0,2)
-// console.log(names.sort())
+const names = ["dania","ali","nubtahil","sajal","candeii","gania","eman"]
+names.splice(0,2)
+console.log(names.sort())
