@@ -1,5 +1,5 @@
 console.log("hellow world❤️")
-// settimeout ia asynchronous function so ye apny time given ke according hi chlay ga
+// settimeout ia asynchronous function so ye apny time given ke according hi chlay ga cahy time 0 hi kiun na dedo
 
 setTimeout(()=>{
     const arr = ["i am nubtahil 💪","lovellly"]
