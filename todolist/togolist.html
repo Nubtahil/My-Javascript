@@ -1,0 +1,192 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo-list</title>
+  </head>
+  <style>
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:400px;
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+ 
+
+.input{
+    width:70%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+}
+
+.add-btn{
+    padding:10px 15px;
+    border:none;
+    background:#007bff;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.add-btn:hover{
+    background:#0056b3;
+}
+
+.ol-list{
+    margin-top:20px;
+}
+
+.ol-list li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    margin-bottom:10px;
+    background:#f8f9fa;
+    border-radius:5px;
+}
+
+.ol-list span{
+    flex:1;
+}
+
+.comtask{
+    background:green;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.comtask:hover{
+    background:darkgreen;
+}
+
+.deletetask{
+    background:red;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.deletetask:hover{
+    background:darkred;
+}
+.completed{
+  text-decoration: line-through;
+  color: gray;
+}
+  </style>
+  <body>
+    <div class="container">
+      <input type="text" class="input" placeholder="enter you task" />
+      <button class="add-btn" onclick="addtask()">add task</button>
+
+      <ol class="ol-list"></ol>
+    </div>
+
+    <script>
+      function addtask() {
+        const input = document.querySelector(".input");
+        const task = input.value.trim();
+        if (task === "") {
+          alert("please enter the task");
+          return
+        }  
+          createTask(task,false)
+          input.value =""
+          savetask()
+         
+        
+      }
+
+      function createTask(task,completed){
+
+        const ol = document.querySelector(".ol-list");
+        const li = document.createElement("li");
+
+          li.innerHTML = `
+        <span class="${completed ? "completed" : ""}">${task}</span>
+        <button class="comtask" onclick="comtask(this)">completed</button>
+        <button class="deletetask" onclick="deletetask(this)">delete</button>
+       `;
+
+       ol.appendChild(li);
+      }
+
+     function comtask(button) {
+     const li = button.parentElement;
+     const span = li.querySelector("span");
+      span.classList.toggle("completed");
+      savetask()
+      }
+
+      function deletetask(button) {
+        const li = button.parentElement;
+        li.remove();
+        savetask()
+      }
+
+ function savetask() {
+
+    const task = [];
+
+    document.querySelectorAll(".ol-list li").forEach((li) => {
+
+        const span = li.querySelector("span");
+
+        task.push({
+            text: span.textContent,
+            completed: span.classList.contains("completed")
+        });
+
+    });
+
+    localStorage.setItem("task", JSON.stringify(task));
+
+}
+ 
+   
+function loadTask() {
+
+    const task = JSON.parse(localStorage.getItem("task")) || [];
+
+    task.forEach((item) => {
+        createTask(item.text, item.completed);
+    });
+
+}1
+loadTask()
+
+
+
+
+    </script>
+  </body>
+</html>  
+
+ 
